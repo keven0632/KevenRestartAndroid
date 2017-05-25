@@ -9,7 +9,7 @@
     tools:context="com.cihon.androidrestart_keven.MainActivity">
     <Button
         android:id="@+id/bt_recyleview"
-        android:text="recyleview"
+        android:text="recyleview的使用"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <Button
@@ -19,12 +19,12 @@
         android:layout_height="wrap_content"/>
     <Button
         android:id="@+id/bt_camrea"
-        android:text="camera"
+        android:text="行驶证拍照"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <Button
         android:id="@+id/bt_webview"
-        android:text="webview"
+        android:text="h5调用拍照,结束后传值给h5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
