@@ -17,7 +17,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:textSize="20sp"/>
-        <view
+        <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#000"/>
@@ -29,7 +29,7 @@
             android:padding="15dp"
             android:textSize="18sp"/>
     </LinearLayout>
-<view
+<View
     android:background="#000"
     android:layout_alignParentLeft="true"
     android:layout_width="1dp"

@@ -4,12 +4,11 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.Button;
 
 import com.cihon.androidrestart_keven.camera.CameraActivity;
@@ -21,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_camrea;
     public final static int REQUEST_CAMERA = 1;
     private Button bt_webview;
+    private Button bt_carnum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_webview = (Button) findViewById(R.id.bt_webview);
         bt_webview.setOnClickListener(this);
 
+        bt_carnum = (Button) findViewById(R.id.bt_carnum);
+        bt_carnum.setOnClickListener(this);
+
     }
 
     @Override
@@ -49,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_webview:
                 startActivity(new Intent(this, WebViewActivity.class));
+                break;
+            case R.id.bt_carnum:
+                startActivity(new Intent(this, CarNumActivity.class));
                 break;
             case R.id.bt_camrea:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

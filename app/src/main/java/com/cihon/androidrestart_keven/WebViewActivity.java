@@ -11,11 +11,10 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import com.cihon.androidrestart_keven.camera.CameraActivity;
@@ -34,15 +33,15 @@ public class WebViewActivity extends AppCompatActivity implements CameraSurfaceV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
         instance = this;
-        Button bt = (Button) findViewById(R.id.bt);
-
-        bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String url = "javascript:" + "getWord('" + s + "')";
-                mWebView.loadUrl(url);
-            }
-        });
+//        Button bt = (Button) findViewById(R.id.bt);
+//
+//        bt.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String url = "javascript:" + "getWord('" + s + "')";
+//                mWebView.loadUrl(url);
+//            }
+//        });
 
         mWebView = (WebView) findViewById(R.id.webview);
         initWebView();
@@ -86,10 +85,17 @@ public class WebViewActivity extends AppCompatActivity implements CameraSurfaceV
         String url = "javascript:" + "getWord('" + str + "')";
         mWebView.loadUrl(url);
 
-        ImageView iv= (ImageView) findViewById(R.id.img);
+        ImageView iv = (ImageView) findViewById(R.id.img);
         iv.setImageBitmap(b);
 
 
+    }
+
+    @Override
+    public void finish() {
+        ViewGroup view = (ViewGroup) getWindow().getDecorView();
+        view.removeAllViews();
+        super.finish();
     }
 
     private class JsInterface {
@@ -103,6 +109,7 @@ public class WebViewActivity extends AppCompatActivity implements CameraSurfaceV
         //拍照
         @JavascriptInterface
         public void takePhoto() {
+            Log.e("Log", "h5进行调用");
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 int permissionCheck = ContextCompat.checkSelfPermission(WebViewActivity.this, Manifest.permission.CAMERA);
                 if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
