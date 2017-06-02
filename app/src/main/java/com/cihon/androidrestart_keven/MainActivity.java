@@ -13,6 +13,9 @@ import android.widget.Button;
 
 import com.cihon.androidrestart_keven.camera.CameraActivity;
 
+
+
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mBt_recyleView;
@@ -21,6 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public final static int REQUEST_CAMERA = 1;
     private Button bt_webview;
     private Button bt_carnum;
+    private Button bt_auto;
+    private Button bt_srcoll;
+    private Button bt_srcoll_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +45,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_carnum = (Button) findViewById(R.id.bt_carnum);
         bt_carnum.setOnClickListener(this);
 
+        bt_auto = (Button) findViewById(R.id.bt_auto);
+        bt_auto.setOnClickListener(this);
+
+        bt_srcoll = (Button) findViewById(R.id.bt_srcoll);
+        bt_srcoll.setOnClickListener(this);
+
+        bt_srcoll_title =(Button) findViewById(R.id.bt_srcoll_title);
+        bt_srcoll_title.setOnClickListener(this);
+
+
+
     }
 
     @Override
@@ -53,8 +70,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bt_webview:
                 startActivity(new Intent(this, WebViewActivity.class));
                 break;
+            case R.id.bt_srcoll:
+                startActivity(new Intent(this, TabLayoutActivity.class));
+                break;
             case R.id.bt_carnum:
                 startActivity(new Intent(this, CarNumActivity.class));
+                break;
+            case R.id.bt_auto:
+                startActivity(new Intent(this, AutoImgActivity.class));
+                break;
+            case R.id.bt_srcoll_title:
+                startActivity(new Intent(this, ScrollingActivity.class));
                 break;
             case R.id.bt_camrea:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
