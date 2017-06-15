@@ -14,8 +14,6 @@ import android.widget.Button;
 import com.cihon.androidrestart_keven.camera.CameraActivity;
 
 
-
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mBt_recyleView;
@@ -27,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_auto;
     private Button bt_srcoll;
     private Button bt_srcoll_title;
+    private Button bt_download;
+    private Button bt_popupWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +51,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_srcoll = (Button) findViewById(R.id.bt_srcoll);
         bt_srcoll.setOnClickListener(this);
 
-        bt_srcoll_title =(Button) findViewById(R.id.bt_srcoll_title);
+        bt_srcoll_title = (Button) findViewById(R.id.bt_srcoll_title);
         bt_srcoll_title.setOnClickListener(this);
 
+        bt_download = (Button) findViewById(R.id.bt_download);
+        bt_download.setOnClickListener(this);
+
+        bt_popupWindow = (Button) findViewById(R.id.bt_popupWindow);
+        bt_popupWindow.setOnClickListener(this);
 
 
     }
@@ -82,6 +87,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bt_srcoll_title:
                 startActivity(new Intent(this, ScrollingActivity.class));
                 break;
+            case R.id.bt_download:
+                startActivity(new Intent(this, DownLoadActivity.class));
+                break;
+            case R.id.bt_popupWindow:
+                startActivity(new Intent(this, PopupWindowActivity.class));
+                break;
             case R.id.bt_camrea:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     int permissionCheck = ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA);
@@ -90,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                    Toast.makeText(context,"拍照和SD卡权限已被禁止，请手动开启",Toast.LENGTH_SHORT).show();
 //                    return;
 //                }
-                        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS}, REQUEST_CAMERA);
+                        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS}, REQUEST_CAMERA);
                         return;
                     }
                     startActivity(new Intent(this, CameraActivity.class));

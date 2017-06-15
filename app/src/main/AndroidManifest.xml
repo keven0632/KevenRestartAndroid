@@ -44,6 +44,10 @@
         </activity>
         <activity android:name=".ScrollingActivity">
         </activity>
+        <activity android:name=".DownLoadActivity">
+        </activity>
+        <activity android:name=".PopupWindowActivity">
+        </activity>
     </application>
 
 </manifest>

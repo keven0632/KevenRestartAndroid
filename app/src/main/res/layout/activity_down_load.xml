@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_down_load"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cihon.androidrestart_keven.DownLoadActivity">
+    <ProgressBar
+        android:id="@+id/down_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"/>
+    <Button
+        android:id="@+id/down_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始下载"/>
+
+    <Switch
+        android:id="@+id/install_mode_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="普通模式"
+    />
+</LinearLayout>

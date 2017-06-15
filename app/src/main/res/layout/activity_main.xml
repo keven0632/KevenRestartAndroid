@@ -54,6 +54,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="头部可向上滑动缩小"/>
+            <Button
+                android:id="@+id/bt_popupWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通用popupWindow使用"/>
+            <Button
+                android:id="@+id/bt_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载文件安装"
+                android:visibility="gone"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
