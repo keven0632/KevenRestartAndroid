@@ -1,10 +1,11 @@
-package com.cihon.androidrestart_keven;
+package com.cihon.androidrestart_keven.activity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.cihon.androidrestart_keven.R;
 import com.cihon.androidrestart_keven.fragment.NewsContentFragment;
 
 public class NewsContentActivity extends AppCompatActivity {

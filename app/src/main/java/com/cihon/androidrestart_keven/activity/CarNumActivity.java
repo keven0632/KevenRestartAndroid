@@ -1,4 +1,4 @@
-package com.cihon.androidrestart_keven;
+package com.cihon.androidrestart_keven.activity;
 
 import android.Manifest;
 import android.content.Context;
@@ -20,6 +20,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.cihon.androidrestart_keven.R;
 import com.cihon.androidrestart_keven.camera.CameraActivity;
 import com.cihon.androidrestart_keven.camera.CameraSurfaceView;
 
@@ -29,7 +30,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.cihon.androidrestart_keven.MainActivity.REQUEST_CAMERA;
+import static com.cihon.androidrestart_keven.activity.MainActivity.REQUEST_CAMERA;
 
 public class CarNumActivity extends AppCompatActivity implements View.OnClickListener , CameraSurfaceView.TransferPhoto{
     String Province = " 京  浙  津  皖  沪  闽  渝  赣  港  鲁  澳  豫  鄂  新   湘  宁  粤  藏  桂  川 冀  贵 晋 云  辽  陕 吉  甘 黑  青   苏   ";

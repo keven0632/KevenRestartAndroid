@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.cihon.androidrestart_keven.FragmentActivity">
+    tools:context="com.cihon.androidrestart_keven.activity.FragmentActivity">
     <fragment
         android:id="@+id/news_title_fragment"
         android:name="com.cihon.androidrestart_keven.fragment.NewsTitleFragment"

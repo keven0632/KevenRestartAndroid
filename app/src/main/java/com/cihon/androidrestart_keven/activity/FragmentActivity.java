@@ -1,9 +1,11 @@
-package com.cihon.androidrestart_keven;
+package com.cihon.androidrestart_keven.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import com.cihon.androidrestart_keven.R;
 
 public class FragmentActivity extends AppCompatActivity implements View.OnClickListener {
 

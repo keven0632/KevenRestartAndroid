@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.cihon.androidrestart_keven.NewsContentActivity;
+import com.cihon.androidrestart_keven.activity.NewsContentActivity;
 import com.cihon.androidrestart_keven.R;
 import com.cihon.androidrestart_keven.bean.News;
 

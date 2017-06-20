@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.cihon.androidrestart_keven.MainActivity">
+    tools:context="com.cihon.androidrestart_keven.activity.MainActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -36,6 +36,7 @@
                 android:text="h5调用拍照,结束后传值给h5"/>
             <Button
                 android:id="@+id/bt_carnum"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="生成车牌号"/>
@@ -65,6 +66,12 @@
                 android:layout_height="wrap_content"
                 android:text="下载文件安装"
                 android:visibility="gone"/>
+            <Button
+                android:id="@+id/bt_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="百度地图定位"
+                android:visibility="visible"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

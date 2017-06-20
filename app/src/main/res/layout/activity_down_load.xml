@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.cihon.androidrestart_keven.DownLoadActivity">
+    tools:context="com.cihon.androidrestart_keven.activity.DownLoadActivity">
     <ProgressBar
         android:id="@+id/down_progress"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"

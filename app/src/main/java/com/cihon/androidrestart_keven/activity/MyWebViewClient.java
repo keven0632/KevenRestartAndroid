@@ -1,4 +1,4 @@
-package com.cihon.androidrestart_keven;
+package com.cihon.androidrestart_keven.activity;
 
 import android.content.Intent;
 import android.net.Uri;

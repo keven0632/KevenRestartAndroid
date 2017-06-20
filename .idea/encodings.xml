@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/libs/BaiduLBS_Android.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cihon/androidrestart_keven/activity/AutoImgActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cihon/androidrestart_keven/activity/BaiduLocation.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cihon/androidrestart_keven/activity/PopupWindowActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cihon/androidrestart_keven/activity/ScrollingActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cihon/androidrestart_keven/activity/TabLayoutActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cihon/androidrestart_keven/adapter/FruitAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cihon/androidrestart_keven/camera/CameraTopRectView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/jniLibs/armeabi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/jniLibs/x86" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/jniLibs/x86_64" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/endmark.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/startmark.png" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>

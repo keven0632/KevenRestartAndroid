@@ -1,4 +1,4 @@
-package com.cihon.androidrestart_keven;
+package com.cihon.androidrestart_keven.activity;
 
 import android.graphics.Color;
 import android.support.design.widget.TabLayout;
@@ -10,6 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.cihon.androidrestart_keven.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,11 +34,11 @@ public class TabLayoutActivity extends AppCompatActivity {
 
         mTabLayout = (TabLayout) findViewById(R.id.tablayout);
         /**
-         * è®¾ç½®tabå­—ä½“çš„é¢œè‰²ï¼Œç¬¬ä¸€ä¸ªä¸ºæœªé€‰ä¸­çš„å­—ä½“çš„é¢œè‰²ï¼Œç¬¬äºŒä¸ªä¸ºé€‰ä¸­çš„å­—ä½“çš„é¢œè‰²
+         * ÉèÖÃtab×ÖÌåµÄÑÕÉ«£¬µÚÒ»¸öÎªÎ´Ñ¡ÖĞµÄ×ÖÌåµÄÑÕÉ«£¬µÚ¶ş¸öÎªÑ¡ÖĞµÄ×ÖÌåµÄÑÕÉ«
          */
         mTabLayout.setTabTextColors(Color.WHITE,Color.RED);
         /**
-         * è®¾ç½®ä¸‹åˆ’çº¿çš„é¢œè‰²
+         * ÉèÖÃÏÂ»®ÏßµÄÑÕÉ«
          */
 //        mTabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorPrimary));
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -70,24 +72,24 @@ public class TabLayoutActivity extends AppCompatActivity {
         if (mList.size() > 0) {
             mList.clear();
         }
-        mList.add("Listå‚ç›´");
-        mList.add("Listå‚ç›´åå‘");
-        mList.add("Listæ°´å¹³");
-        mList.add("Listæ°´å¹³åå‘");
+        mList.add("List´¹Ö±");
+        mList.add("List´¹Ö±·´Ïò");
+        mList.add("ListË®Æ½");
+        mList.add("ListË®Æ½·´Ïò");
 
-        mList.add("Gridå‚ç›´");
-        mList.add("Gridå‚ç›´åå‘");
-        mList.add("Gridæ°´å¹³");
-        mList.add("Gridæ°´å¹³åå‘");
+        mList.add("Grid´¹Ö±");
+        mList.add("Grid´¹Ö±·´Ïò");
+        mList.add("GridË®Æ½");
+        mList.add("GridË®Æ½·´Ïò");
 
-        mList.add("ç€‘å¸ƒæµå‚ç›´");
-        mList.add("ç€‘å¸ƒæµå‚ç›´åå‘");
-        mList.add("ç€‘å¸ƒæµæ°´å¹³");
-        mList.add("ç€‘å¸ƒæµæ°´å¹³åå‘");
+        mList.add("ÆÙ²¼Á÷´¹Ö±");
+        mList.add("ÆÙ²¼Á÷´¹Ö±·´Ïò");
+        mList.add("ÆÙ²¼Á÷Ë®Æ½");
+        mList.add("ÆÙ²¼Á÷Ë®Æ½·´Ïò");
 
-        // è®¾ç½®ViewPagerçš„Adapter
+        // ÉèÖÃViewPagerµÄAdapter
         mViewPager.setAdapter(new MyPagerAdapter(mList));
-        // å…³é”®ä¸€è¡Œä»£ç ï¼Œå°†TabLayoutä¸ViewPagerå…³è”
+        // ¹Ø¼üÒ»ĞĞ´úÂë£¬½«TabLayoutÓëViewPager¹ØÁª
         mTabLayout.setupWithViewPager(mViewPager);
     }
 
@@ -125,7 +127,7 @@ public class TabLayoutActivity extends AppCompatActivity {
         }
 
         /**
-         * é‡å†™ä¸TabLayouté…åˆ
+         * ÖØĞ´ÓëTabLayoutÅäºÏ
          */
         @Override
         public CharSequence getPageTitle(int position) {

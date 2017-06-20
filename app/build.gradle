@@ -1,23 +1,58 @@
 apply plugin: 'com.android.application'
 
 android {
+
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+    android {compileOptions.encoding = "GBK"}
     defaultConfig {
         applicationId "com.cihon.androidrestart_keven"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        jackOptions{
+            enabled true
+        }
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    
+    signingConfigs {
+        debug {
+            storeFile file("androidRestart.jks")
+            storePassword '123456'
+            keyAlias 'keven'
+            keyPassword '123456'
+        }
+    }
+    //打包后应用名称
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            def fileName
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                if (variant.buildType.name.equals('release')) {
+                    fileName = "AndroidRestart${defaultConfig.versionName}.apk"
+                } else if (variant.buildType.name.equals('debug')) {
+                    fileName = "AndroidRestart_DEBUG${defaultConfig.versionName}.apk"
+                }
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
 }
+//百度地图安全码 35:DD:66:B5:3A:F7:8D:5C:04:A5:6F:42:C8:43:E8:34:D0:02:FA:ED;com.cihon.androidrestart_keven
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -31,4 +66,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.jude:rollviewpager:1.2.9'
     compile files('libs/universal-image-loader-1.9.3.jar')
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    compile files('libs/BaiduLBS_Android.jar')
 }

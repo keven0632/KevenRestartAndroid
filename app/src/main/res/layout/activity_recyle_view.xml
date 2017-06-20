@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.cihon.androidrestart_keven.RecyleViewActivity">
+    tools:context="com.cihon.androidrestart_keven.activity.RecyleViewActivity">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"

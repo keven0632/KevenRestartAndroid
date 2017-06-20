@@ -44,8 +44,9 @@ class CameraTopRectView extends View {
 
     private static final int LEFT_PADDING = 10;
     private static final int RIGHT_PADDING = 10;
-    private static final String TIPS = "ä¸­åäººæ°‘å…±å’Œå›½æœºåŠ¨è½¦è¡Œé©¶è¯";
-    private static final String TIPS_bottom = "å°†è¡Œé©¶è¯ä¸»é¡µç½®äºæ­¤åŒºåŸŸï¼Œå¹¶å¯¹é½å·¦ä¸‹è§’å‘è¯æœºå…³å°ç« ";
+    //
+    private static final String TIPS = "ÖĞ»ªÈËÃñ¹²ºÍ¹ú»ú¶¯³µĞĞÊ»Ö¤";
+    private static final String TIPS_bottom = "½«ĞĞÊ»Ö¤Ö÷Ò³ÖÃÓÚ´ËÇøÓò£¬²¢¶ÔÆë×óÏÂ½Ç·¢Ö¤»ú¹ØÓ¡ÕÂ";
 
     private Paint linePaint;
     private Paint wordPaint;
@@ -75,12 +76,12 @@ class CameraTopRectView extends View {
         Activity activity = (Activity) context;
 
         /**
-         * è®¡ç®—ä¸åŒåˆ†è¾¨ç‡çš„å¤§å°ä¸åŒ
+         * ¼ÆËã²»Í¬·Ö±æÂÊµÄ´óĞ¡²»Í¬
          */
-        //1.è·å–å½“å‰è®¾å¤‡çš„å±å¹•å¤§å°
+        //1.»ñÈ¡µ±Ç°Éè±¸µÄÆÁÄ»´óĞ¡
         DisplayMetrics displayMetrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        //2.è®¡ç®—ä¸ä½ å¼€å‘æ—¶è®¾å®šçš„å±å¹•å¤§å°çš„çºµæ¨ªæ¯”(è¿™é‡Œå‡è®¾ä½ å¼€å‘æ—¶å®šçš„å±å¹•å¤§å°æ˜¯480*800)
+        //2.¼ÆËãÓëÄã¿ª·¢Ê±Éè¶¨µÄÆÁÄ»´óĞ¡µÄ×İºá±È(ÕâÀï¼ÙÉèÄã¿ª·¢Ê±¶¨µÄÆÁÄ»´óĞ¡ÊÇ480*800)
         int screenWidth = displayMetrics.widthPixels;
         int screenHeight = displayMetrics.heightPixels;
         float ratioWidth = (float) screenWidth / 1080;
@@ -96,38 +97,38 @@ class CameraTopRectView extends View {
                 OFFSET_TOP = 0;
             }
         }
-        //åœ¨è‡ªå®šä¹‰viewä¸­ä½¿ç”¨ï¼š3.æ ¹æ®ä¸Šä¸€æ­¥è®¡ç®—å‡ºæ¥çš„
-        // æœ€å°çºµæ¨ªæ¯”æ¥ç¡®å®šå­—ä½“çš„å¤§å°(å‡å®šåœ¨480*800å±å¹•ä¸‹å­—ä½“å¤§å°è®¾å®šä¸º35)
-         text_top= Math.round(TEXT_SIZE_TOP * RATIO);
-         text_bottom= Math.round(TEXT_SIZE_Bottom * RATIO);
-         text30= Math.round(30 * RATIO);
-         text70= Math.round(70 * RATIO);
-         text260= Math.round(260 * RATIO);
-         text300= Math.round(300 * RATIO);
-         text10= Math.round(10 * RATIO);
-         text80= Math.round(80 * RATIO);
-        //4.æ ¹æ®ä¸Šä¸€æ­¥è®¡ç®—çš„å­—ä½“å¤§å°æ¥è®¾å®šåº”ç”¨ç¨‹åºä¸­å­—ä½“çš„å¤§å°
+        //ÔÚ×Ô¶¨ÒåviewÖĞÊ¹ÓÃ£º3.¸ù¾İÉÏÒ»²½¼ÆËã³öÀ´µÄ
+        // ×îĞ¡×İºá±ÈÀ´È·¶¨×ÖÌåµÄ´óĞ¡(¼Ù¶¨ÔÚ480*800ÆÁÄ»ÏÂ×ÖÌå´óĞ¡Éè¶¨Îª35)
+        text_top= Math.round(TEXT_SIZE_TOP * RATIO);
+        text_bottom= Math.round(TEXT_SIZE_Bottom * RATIO);
+        text30= Math.round(30 * RATIO);
+        text70= Math.round(70 * RATIO);
+        text260= Math.round(260 * RATIO);
+        text300= Math.round(300 * RATIO);
+        text10= Math.round(10 * RATIO);
+        text80= Math.round(80 * RATIO);
+        //4.¸ù¾İÉÏÒ»²½¼ÆËãµÄ×ÖÌå´óĞ¡À´Éè¶¨Ó¦ÓÃ³ÌĞòÖĞ×ÖÌåµÄ´óĞ¡
 
         WindowManager wm = (WindowManager) activity.getSystemService(Context.WINDOW_SERVICE);
-        panelWidth = wm.getDefaultDisplay().getWidth();//æ‹¿åˆ°å±å¹•çš„å®½
-        panelHeght = wm.getDefaultDisplay().getHeight();//æ‹¿åˆ°å±å¹•çš„é«˜
+        panelWidth = wm.getDefaultDisplay().getWidth();//ÄÃµ½ÆÁÄ»µÄ¿í
+        panelHeght = wm.getDefaultDisplay().getHeight();//ÄÃµ½ÆÁÄ»µÄ¸ß
 
-        //é«˜åº¦ä¸éœ€è¦dpè½¬æ¢px,ä¸ç„¶æ•´ä½“ç›¸æœºä¼šå‘ä¸Šç§»åŠ¨ä¸€å°èŠ‚
+        //¸ß¶È²»ĞèÒªdp×ª»»px,²»È»ÕûÌåÏà»ú»áÏòÉÏÒÆ¶¯Ò»Ğ¡½Ú
 //        viewHeight = panelHeght - (int) DisplayUtil.dp2px(activity,TOP_BAR_HEIGHT + BOTTOM_BTN_HEIGHT);
 
         viewHeight = panelHeght;
-        //viewHeight,ç•Œé¢çš„é«˜,viewWidth,ç•Œé¢çš„å®½
+        //viewHeight,½çÃæµÄ¸ß,viewWidth,½çÃæµÄ¿í
         viewWidth = panelWidth;
-        Log.e("Log","ç•Œé¢å®½åº¦--"+viewWidth+"ç•Œé¢é«˜åº¦--"+viewHeight);
+        Log.e("Log","½çÃæ¿í¶È--"+viewWidth+"½çÃæ¸ß¶È--"+viewHeight);
 
         /*rectWidth = panelWidth
                 - UnitUtils.getInstance(activity).dip2px(
                         LEFT_PADDING + RIGHT_PADDING);*/
 
         rectWidth = panelWidth - DisplayUtil.dp2px(activity, LEFT_PADDING + RIGHT_PADDING);
-        Log.e("Log","è‡ªå®šä¹‰æ§ä»¶å®½åº¦--"+rectWidth);
+        Log.e("Log","×Ô¶¨Òå¿Ø¼ş¿í¶È--"+rectWidth);
         rectHeght = (int) (rectWidth * 54 / 85.6);
-        // ç›¸å¯¹äºæ­¤view
+        // Ïà¶ÔÓÚ´Ëview
         rectTop = (viewHeight - rectHeght) / 2;
         rectLeft = (viewWidth - rectWidth) / 2;
         rectBottom = rectTop + rectHeght;
@@ -139,7 +140,7 @@ class CameraTopRectView extends View {
         linePaint.setAntiAlias(true);
         linePaint.setColor(Color.rgb(0xdd, 0x42, 0x2f));
         linePaint.setStyle(Style.STROKE);
-        linePaint.setStrokeWidth(LINE_WIDTH);// è®¾ç½®çº¿å®½
+        linePaint.setStrokeWidth(LINE_WIDTH);// ÉèÖÃÏß¿í
         linePaint.setAlpha(255);
 
         wordPaint = new Paint();
@@ -171,13 +172,13 @@ class CameraTopRectView extends View {
         wordPaint.setColor(Color.TRANSPARENT);
         canvas.drawRect(rect, wordPaint);
 
-        //ç”»å·¦ä¸‹è§’æ­£æ–¹å½¢
+        //»­×óÏÂ½ÇÕı·½ĞÎ
 //        wordPaint.setColor(Color.RED);
         rect = new Rect(rectLeft + text70, rectBottom - text260, rectLeft + text300, rectBottom - text30);
         canvas.drawRect(rect, linePaint);
 
 
-        //ç”»è’™å±‚
+        //»­ÃÉ²ã
         wordPaint.setColor(0xa0000000);
         rect = new Rect(0, viewHeight / 2 + rectHeght / 2, viewWidth, viewHeight);
         canvas.drawRect(rect, wordPaint);
@@ -191,12 +192,12 @@ class CameraTopRectView extends View {
         rect = new Rect(viewWidth - (viewWidth - rectWidth) / 2, viewHeight / 2 - rectHeght / 2, viewWidth, viewHeight / 2 + rectHeght / 2);
         canvas.drawRect(rect, wordPaint);
 
-        //é‡åˆ¶rect  å¹¶ç”»æ–‡å­—  å§æ–‡å­—ç½®äºrectä¸­é—´  ç»˜åˆ¶åº•éƒ¨æ–‡å­—
+        //ÖØÖÆrect  ²¢»­ÎÄ×Ö  °ÉÎÄ×ÖÖÃÓÚrectÖĞ¼ä  »æÖÆµ×²¿ÎÄ×Ö
         rect = new Rect(rectLeft, rectTop - text80, rectRight, rectTop - text10);
         wordPaint_bottom.setColor(Color.WHITE);
         canvas.drawText(TIPS_bottom, rect.centerX(), baseline1, wordPaint_bottom);
 
-        //é‡åˆ¶rect  å¹¶ç”»æ–‡å­—  å§æ–‡å­—ç½®äºrectä¸­é—´
+        //ÖØÖÆrect  ²¢»­ÎÄ×Ö  °ÉÎÄ×ÖÖÃÓÚrectÖĞ¼ä
         rect = new Rect(rectLeft, rectTop - text80, rectRight, rectTop - text10);
         wordPaint.setColor(Color.WHITE);
         canvas.drawText(TIPS, rect.centerX(), baseline, wordPaint);

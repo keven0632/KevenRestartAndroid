@@ -18,7 +18,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.WindowManager;
 
-import com.cihon.androidrestart_keven.WebViewActivity;
+import com.cihon.androidrestart_keven.activity.WebViewActivity;
 import com.cihon.androidrestart_keven.util.Base64Util;
 
 import java.io.BufferedOutputStream;

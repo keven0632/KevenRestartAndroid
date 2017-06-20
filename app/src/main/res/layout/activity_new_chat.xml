@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#d8e0e8"
     android:orientation="vertical"
-    tools:context="com.cihon.androidrestart_keven.NewChatActivity">
+    tools:context="com.cihon.androidrestart_keven.activity.NewChatActivity">
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="0dp"

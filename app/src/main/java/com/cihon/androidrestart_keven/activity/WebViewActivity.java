@@ -1,4 +1,4 @@
-package com.cihon.androidrestart_keven;
+package com.cihon.androidrestart_keven.activity;
 
 import android.Manifest;
 import android.content.Context;
@@ -17,10 +17,11 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ImageView;
 
+import com.cihon.androidrestart_keven.R;
 import com.cihon.androidrestart_keven.camera.CameraActivity;
 import com.cihon.androidrestart_keven.camera.CameraSurfaceView;
 
-import static com.cihon.androidrestart_keven.MainActivity.REQUEST_CAMERA;
+import static com.cihon.androidrestart_keven.activity.MainActivity.REQUEST_CAMERA;
 
 public class WebViewActivity extends AppCompatActivity implements CameraSurfaceView.TransferPhoto {
 

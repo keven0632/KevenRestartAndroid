@@ -1,4 +1,4 @@
-package com.cihon.androidrestart_keven;
+package com.cihon.androidrestart_keven.activity;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.cihon.androidrestart_keven.R;
 import com.cihon.androidrestart_keven.service.DownloadService;
 
 import java.util.concurrent.TimeUnit;

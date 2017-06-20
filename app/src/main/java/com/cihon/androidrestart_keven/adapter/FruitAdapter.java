@@ -47,7 +47,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
             public void onClick(View v) {
                 int position = holder.getAdapterPosition();
                 Fruit fruit = mFruitList.get(position);
-                Toast.makeText(v.getContext(),"ä½ ç‚¹å‡»äº†"+fruit.getName(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(),"Äãµã»÷ÁË"+fruit.getName(),Toast.LENGTH_SHORT).show();
             }
         });
         holder.fruitImage.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +55,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
             public void onClick(View v) {
                 int position = holder.getAdapterPosition();
                 Fruit fruit = mFruitList.get(position);
-                Toast.makeText(v.getContext(),"ä½ ç‚¹å‡»äº†å›¾ç‰‡"+fruit.getName(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(),"Äãµã»÷ÁËÍ¼Æ¬"+fruit.getName(),Toast.LENGTH_SHORT).show();
 
             }
         });

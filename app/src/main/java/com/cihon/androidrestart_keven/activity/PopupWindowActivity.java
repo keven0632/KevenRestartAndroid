@@ -1,4 +1,4 @@
-package com.cihon.androidrestart_keven;
+package com.cihon.androidrestart_keven.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cihon.androidrestart_keven.PopupWindow.CommonPoupWindow;
+import com.cihon.androidrestart_keven.R;
 import com.cihon.androidrestart_keven.adapter.PopupAdapter;
 import com.cihon.androidrestart_keven.util.CommonUtil;
 import com.cihon.androidrestart_keven.util.DpUtil;
@@ -44,7 +45,7 @@ public class PopupWindowActivity extends AppCompatActivity implements CommonPoup
     }
 
 
-    //å‘ä¸‹å¼¹å‡º
+    //ÏòÏÂµ¯³ö
     public void showDownPop(View view) {
         if (popupWindow != null && popupWindow.isShowing()) return;
         popupWindow = new CommonPoupWindow.Builder(this)
@@ -55,13 +56,13 @@ public class PopupWindowActivity extends AppCompatActivity implements CommonPoup
                 .setOutsideTouchable(true)
                 .create();
         popupWindow.showAsDropDown(view);
-        //å¾—åˆ°buttonçš„å·¦ä¸Šè§’åæ ‡
+        //µÃµ½buttonµÄ×óÉÏ½Ç×ø±ê
 //        int[] positions = new int[2];
 //        view.getLocationOnScreen(positions);
 //        popupWindow.showAtLocation(findViewById(android.R.id.content), Gravity.NO_GRAVITY, 0, positions[1] + view.getHeight());
     }
 
-    //å‘å³å¼¹å‡º
+    //ÏòÓÒµ¯³ö
     public void showRightPop(View view) {
         if (popupWindow != null && popupWindow.isShowing()) return;
         popupWindow = new CommonPoupWindow.Builder(this)
@@ -71,13 +72,13 @@ public class PopupWindowActivity extends AppCompatActivity implements CommonPoup
                 .setViewOnclickListener(this)
                 .create();
         popupWindow.showAsDropDown(view, view.getWidth(), -view.getHeight());
-        //å¾—åˆ°buttonçš„å·¦ä¸Šè§’åæ ‡
+        //µÃµ½buttonµÄ×óÉÏ½Ç×ø±ê
 //        int[] positions = new int[2];
 //        view.getLocationOnScreen(positions);
 //        popupWindow.showAtLocation(findViewById(android.R.id.content), Gravity.NO_GRAVITY, positions[0] + view.getWidth(), positions[1]);
     }
 
-    //å‘å·¦å¼¹å‡º
+    //Ïò×óµ¯³ö
     public void showLeftPop(View view) {
         if (popupWindow != null && popupWindow.isShowing()) return;
         popupWindow = new CommonPoupWindow.Builder(this)
@@ -87,30 +88,30 @@ public class PopupWindowActivity extends AppCompatActivity implements CommonPoup
                 .setViewOnclickListener(this)
                 .create();
         popupWindow.showAsDropDown(view, -popupWindow.getWidth(), -view.getHeight());
-        //å¾—åˆ°buttonçš„å·¦ä¸Šè§’åæ ‡
+        //µÃµ½buttonµÄ×óÉÏ½Ç×ø±ê
 //        int[] positions = new int[2];
 //        view.getLocationOnScreen(positions);
 //        popupWindow.showAtLocation(findViewById(android.R.id.content), Gravity.NO_GRAVITY, positions[0] - popupWindow.getWidth(), positions[1]);
     }
 
 
-    //å…¨å±å¼¹å‡º
+    //È«ÆÁµ¯³ö
     public void showAll(View view) {
         if (popupWindow != null && popupWindow.isShowing()) return;
         View upView = LayoutInflater.from(this).inflate(R.layout.popup_up, null);
-        //æµ‹é‡Viewçš„å®½é«˜
+        //²âÁ¿ViewµÄ¿í¸ß
         CommonUtil.measureWidthAndHeight(upView);
         popupWindow = new CommonPoupWindow.Builder(this)
                 .setView(R.layout.popup_up)
                 .setWidthAndHeight(ViewGroup.LayoutParams.MATCH_PARENT, upView.getMeasuredHeight())
-                .setBackGroundLevel(0.5f)//å–å€¼èŒƒå›´0.0f-1.0f å€¼è¶Šå°è¶Šæš—
+                .setBackGroundLevel(0.5f)//È¡Öµ·¶Î§0.0f-1.0f ÖµÔ½Ğ¡Ô½°µ
                 .setAnimationStyle(R.style.AnimUp)
                 .setViewOnclickListener(this)
                 .create();
         popupWindow.showAtLocation(findViewById(android.R.id.content), Gravity.BOTTOM, 0, 0);
     }
 
-    //å‘ä¸Šå¼¹å‡º
+    //ÏòÉÏµ¯³ö
     public void showUpPop(View view) {
         if (popupWindow != null && popupWindow.isShowing()) return;
         popupWindow = new CommonPoupWindow.Builder(this)
@@ -120,7 +121,7 @@ public class PopupWindowActivity extends AppCompatActivity implements CommonPoup
                 .create();
         popupWindow.showAsDropDown(view, 0, -(popupWindow.getHeight() + view.getMeasuredHeight()));
 
-        //å¾—åˆ°buttonçš„å·¦ä¸Šè§’åæ ‡
+        //µÃµ½buttonµÄ×óÉÏ½Ç×ø±ê
 //        int[] positions = new int[2];
 //        view.getLocationOnScreen(positions);
 //        popupWindow.showAtLocation(findViewById(android.R.id.content), Gravity.NO_GRAVITY, positions[0], positions[1] - popupWindow.getHeight());
@@ -138,7 +139,7 @@ public class PopupWindowActivity extends AppCompatActivity implements CommonPoup
 
     @Override
     public void getChildView(View view, int layoutResId) {
-        //è·å¾—PopupWindowå¸ƒå±€é‡Œçš„View
+        //»ñµÃPopupWindow²¼¾ÖÀïµÄView
         switch (layoutResId) {
             case R.layout.popup_down:
                 RecyclerView recycle_view = (RecyclerView) view.findViewById(R.id.recycle_view);
@@ -162,7 +163,7 @@ public class PopupWindowActivity extends AppCompatActivity implements CommonPoup
                 btn_take_photo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        toast("æ‹ç…§");
+                        toast("ÅÄÕÕ");
                         if (popupWindow != null) {
                             popupWindow.dismiss();
                         }
@@ -171,7 +172,7 @@ public class PopupWindowActivity extends AppCompatActivity implements CommonPoup
                 btn_select_photo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        toast("ç›¸å†Œé€‰å–");
+                        toast("Ïà²áÑ¡È¡");
                         if (popupWindow != null) {
                             popupWindow.dismiss();
                         }
@@ -201,14 +202,14 @@ public class PopupWindowActivity extends AppCompatActivity implements CommonPoup
                 tv_like.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        toast("èµä¸€ä¸ª");
+                        toast("ÔŞÒ»¸ö");
                         popupWindow.dismiss();
                     }
                 });
                 tv_hate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        toast("è¸©ä¸€ä¸‹");
+                        toast("²ÈÒ»ÏÂ");
                         popupWindow.dismiss();
                     }
                 });
@@ -217,7 +218,7 @@ public class PopupWindowActivity extends AppCompatActivity implements CommonPoup
     }
 
     /**
-     * @param str å¼¹å‡ºçš„æ–‡å­—
+     * @param str µ¯³öµÄÎÄ×Ö
      */
     public void toast(String str) {
         Toast.makeText(this, str, Toast.LENGTH_SHORT).show();

@@ -6,7 +6,7 @@
     android:id="@+id/activity_auto_img"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cihon.androidrestart_keven.AutoImgActivity">
+    tools:context="com.cihon.androidrestart_keven.activity.AutoImgActivity">
     <com.jude.rollviewpager.RollPagerView
         android:id="@+id/roll_view_pager"
         android:layout_width="match_parent"
