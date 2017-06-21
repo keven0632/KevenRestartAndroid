@@ -61,15 +61,7 @@ public class AutoImgActivity extends AppCompatActivity {
             MyApp.getApplication().mImageLoader.displayImage(imgs[position],view);
             view.setScaleType(ImageView.ScaleType.CENTER_CROP);
             view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-            view.setOnClickListener(new View.OnClickListener()      // 点击事件
-            {
-                @Override
-                public void onClick(View v)
-                {
-                    Toast.makeText(AutoImgActivity.this, "点击了第" + picNo + "张图片", Toast.LENGTH_SHORT).show();
-                }
-
-            });
+            view.setOnClickListener(v -> Toast.makeText(AutoImgActivity.this, "点击了第" + picNo + "张图片", Toast.LENGTH_SHORT).show());
 
             return view;
         }

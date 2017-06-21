@@ -1,7 +1,5 @@
 package com.cihon.androidrestart_keven.Base;
 
-import android.app.Application;
-
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -9,11 +7,13 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
+import org.litepal.LitePalApplication;
+
 /**
  * Created by zhengjian on 2017/6/1.
  */
 
-public class MyApp extends Application {
+public class MyApp extends LitePalApplication {
     public static MyApp application;
     public static ImageLoader mImageLoader = ImageLoader.getInstance();
 

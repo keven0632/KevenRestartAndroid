@@ -5,7 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="orange_salmon">#EC5745</color>
     <color name="white">#ffffff</color>
-
+    <color name="linecolor">#39C8D6</color>
+    <color name="linecolor1">#FF00A1F2</color>
 
     <color name="gray_pressed">#b5b5b6</color>
     <color name="gray_normal">#666667</color>

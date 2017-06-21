@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4c000000"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/loading_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.cihon.androidrestart_keven.avi.AVLoadingIndicatorView
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="66dp"
+            android:layout_height="52dp"
+            app:indicator="LineScale"
+            android:id="@+id/animation"
+        />
+        <TextView
+            android:layout_below="@+id/animation"
+            android:layout_width="wrap_content"
+            android:text="正在与保险公司核对您的信息..."
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
