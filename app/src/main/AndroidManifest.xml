@@ -97,6 +97,8 @@
         </activity>
         <activity android:name=".activity.AnimationActivity">
         </activity>
+        <activity android:name=".activity.AllAnimationActivity">
+        </activity>
     </application>
 
 </manifest>

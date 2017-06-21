@@ -7,35 +7,41 @@
     android:background="#4c000000"
     android:gravity="center_horizontal"
     android:orientation="vertical">
+    <Button
+        android:visibility="visible"
+        android:id="@+id/bt_allanimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多种动画"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center">
         <ImageView
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:src="@mipmap/loading_line"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <com.cihon.androidrestart_keven.avi.AVLoadingIndicatorView
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:src="@mipmap/loading_line"/>
+        <com.cihon.androidrestart_keven.avi.AVLoadingIndicatorView
+            android:id="@+id/animation"
             android:layout_width="66dp"
             android:layout_height="52dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             app:indicator="LineScale"
-            android:id="@+id/animation"
         />
         <TextView
-            android:layout_below="@+id/animation"
             android:layout_width="wrap_content"
-            android:text="正在与保险公司核对您的信息..."
-            android:textSize="16sp"
-            android:textColor="#ffffff"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/animation"
             android:layout_centerHorizontal="true"
-            android:layout_height="wrap_content"/>
+            android:layout_marginTop="10dp"
+            android:text="正在与保险公司核对您的信息..."
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
     </RelativeLayout>
-
 
 
 </LinearLayout>

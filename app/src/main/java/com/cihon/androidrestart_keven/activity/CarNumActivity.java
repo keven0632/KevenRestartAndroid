@@ -33,14 +33,14 @@ import java.util.List;
 import static com.cihon.androidrestart_keven.activity.MainActivity.REQUEST_CAMERA;
 
 public class CarNumActivity extends AppCompatActivity implements View.OnClickListener , CameraSurfaceView.TransferPhoto{
-    String Province = " äº¬  æµ™  æ´¥  çš–  æ²ª  é—½  æ¸  èµ£  æ¸¯  é²  æ¾³  è±«  é„‚  æ–°   æ¹˜  å®  ç²¤  è—  æ¡‚  å· å†€  è´µ æ™‹ äº‘  è¾½  é™• å‰  ç”˜ é»‘  é’   è‹   ";
-    String[] pro = {"äº¬", "æµ™", "æ´¥", "çš–", "æ²ª", "é—½", "æ¸", "èµ£", "æ¸¯", "é²", "æ¾³", "è±«", "é„‚", "æ–°", "æ¹˜", "å®", "ç²¤", "è—", "æ¡‚", "å·", "å†€", "è´µ", "æ™‹", "äº‘", "è¾½", "é™•", "å‰", "ç”˜", "é»‘", "é’", "è‹"};
+    String Province = " ¾©  Õã  ½ò  Íî  »¦  Ãö  Óå  ¸Ó  ¸Û  Â³  °Ä  Ô¥  ¶õ  ĞÂ   Ïæ  Äş  ÔÁ  ²Ø  ¹ğ  ´¨ ¼½  ¹ó ½ú ÔÆ  ÁÉ  ÉÂ ¼ª  ¸Ê ºÚ  Çà   ËÕ   ";
+    String[] pro = {"¾©", "Õã", "½ò", "Íî", "»¦", "Ãö", "Óå", "¸Ó", "¸Û", "Â³", "°Ä", "Ô¥", "¶õ", "ĞÂ", "Ïæ", "Äş", "ÔÁ", "²Ø", "¹ğ", "´¨", "¼½", "¹ó", "½ú", "ÔÆ", "ÁÉ", "ÉÂ", "¼ª", "¸Ê", "ºÚ", "Çà", "ËÕ"};
     String[] n_second = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q"};
     String[] abc = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
     String[] abc123 = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
     String[] a123 = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
-   
+
     List<String> list_abc = new ArrayList<>();
     private WebView mWebView;
 
@@ -67,7 +67,7 @@ public class CarNumActivity extends AppCompatActivity implements View.OnClickLis
 //
 //                    int index = (int) (Math.random() * pro.length);
 ////                    String s = pro[index];
-//                    String s = "å‰";
+//                    String s = "¼ª";
 //                    sb.append(s);
 //
 //                    int index2 = (int) (Math.random() * n_second.length);
@@ -144,18 +144,18 @@ public class CarNumActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     /**
-     * åˆå§‹åŒ–webview
+     * ³õÊ¼»¯webview
      */
     public void initWebView() {
         MyWebViewClient webViewClient = new MyWebViewClient();
         mWebView.setWebViewClient(webViewClient);
         WebSettings webSettings = mWebView.getSettings();
 
-        //æ‰“å¼€é¡µé¢æ—¶ï¼Œè‡ªé€‚åº”å±å¹•
+        //´ò¿ªÒ³ÃæÊ±£¬×ÔÊÊÓ¦ÆÁÄ»
         webSettings.setLoadWithOverviewMode(true);
-        //å°†å›¾ç‰‡è°ƒæ•´åˆ°é€‚åˆwebviewçš„å¤§å°
+        //½«Í¼Æ¬µ÷Õûµ½ÊÊºÏwebviewµÄ´óĞ¡
         webSettings.setUseWideViewPort(true);
-        //é¡µé¢æ”¯æŒç¼©æ”¾
+        //Ò³ÃæÖ§³ÖËõ·Å
         webSettings.setBuiltInZoomControls(true);
         webSettings.setSupportZoom(true);
         webSettings.setJavaScriptEnabled(true);
@@ -164,18 +164,18 @@ public class CarNumActivity extends AppCompatActivity implements View.OnClickLis
         mWebView.loadUrl("http://123.57.60.91/onStar3/vehicle-License.html");
 //        mWebView.loadUrl("http://wxpay.wxutil.com/mch/pay/h5.v2.php");
 
-//        åœ¨jsä¸­è°ƒç”¨æœ¬åœ°javaæ–¹æ³•
+//        ÔÚjsÖĞµ÷ÓÃ±¾µØjava·½·¨
         mWebView.addJavascriptInterface(new JsInterface(this), "demo");
     }
 
     /**
-     * @param str ä¼ é€’ç»™h5é¡µé¢æ•°æ®
+     * @param str ´«µİ¸øh5Ò³ÃæÊı¾İ
      */
     @Override
     public void imgBase64(String str, Bitmap b) {
 
-        Log.e("Log", "webviewæ˜¯ç©ºçš„--" + (mWebView == null));
-        Log.e("Log", "ä¼ é€’ç»™webviewçš„æ•°æ®æ˜¯--" + str);
+        Log.e("Log", "webviewÊÇ¿ÕµÄ--" + (mWebView == null));
+        Log.e("Log", "´«µİ¸øwebviewµÄÊı¾İÊÇ--" + str);
         String url = "javascript:" + "getWord('" + str + "')";
         mWebView.loadUrl(url);
 
@@ -199,16 +199,16 @@ public class CarNumActivity extends AppCompatActivity implements View.OnClickLis
             this.mContext = context;
         }
 
-        //åœ¨jsä¸­è°ƒç”¨window.demo.takePhoto()ï¼Œä¾¿ä¼šè§¦å‘æ­¤æ–¹æ³•ã€‚
-        //æ‹ç…§
+        //ÔÚjsÖĞµ÷ÓÃwindow.demo.takePhoto()£¬±ã»á´¥·¢´Ë·½·¨¡£
+        //ÅÄÕÕ
         @JavascriptInterface
         public void takePhoto() {
-            Log.e("Log", "h5è¿›è¡Œè°ƒç”¨");
+            Log.e("Log", "h5½øĞĞµ÷ÓÃ");
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 int permissionCheck = ContextCompat.checkSelfPermission(CarNumActivity.this, Manifest.permission.CAMERA);
                 if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
 //                if(!ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.CAMERA)) {
-//                    Toast.makeText(context,"æ‹ç…§å’ŒSDå¡æƒé™å·²è¢«ç¦æ­¢ï¼Œè¯·æ‰‹åŠ¨å¼€å¯",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context,"ÅÄÕÕºÍSD¿¨È¨ÏŞÒÑ±»½ûÖ¹£¬ÇëÊÖ¶¯¿ªÆô",Toast.LENGTH_SHORT).show();
 //                    return;
 //                }
                     ActivityCompat.requestPermissions(CarNumActivity.this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS}, REQUEST_CAMERA);
@@ -233,13 +233,13 @@ public class CarNumActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     /**
-     * äº¤å¼º12xxx05072016xxxxxxÂ Â Â å•†ä¸š12xxx05282016xxxxxx
+     * ½»Ç¿12xxx05072016xxxxxx???ÉÌÒµ12xxx05282016xxxxxx
      */
     private void initNum() {
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < 10000; i++) {
-            sb.append("äº¤å¼º12");
+            sb.append("½»Ç¿12");
 
             int index = (int) (Math.random() * a123.length);
             String s1 = a123[index];
@@ -279,7 +279,7 @@ public class CarNumActivity extends AppCompatActivity implements View.OnClickLis
             String s9 = a123[index9];
             sb.append(s9);
 
-            sb.append("Â Â Â å•†ä¸š12");
+            sb.append("???ÉÌÒµ12");
             int index11 = (int) (Math.random() * a123.length);
             int index12 = (int) (Math.random() * a123.length);
             int index13 = (int) (Math.random() * a123.length);
@@ -333,14 +333,14 @@ public class CarNumActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     /**
-     * åˆ¤æ–­å½“å‰å­˜å‚¨å¡æ˜¯å¦å¯ç”¨
+     * ÅĞ¶Ïµ±Ç°´æ´¢¿¨ÊÇ·ñ¿ÉÓÃ
      **/
     public boolean checkSDCardAvailable() {
         return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
     }
 
     /**
-     * è·å–å½“å‰éœ€è¦æŸ¥è¯¢çš„æ–‡ä»¶å¤¹
+     * »ñÈ¡µ±Ç°ĞèÒª²éÑ¯µÄÎÄ¼ş¼Ğ
      **/
     public String takePicRootDir(Context context) {
         if (checkSDCardAvailable()) {
