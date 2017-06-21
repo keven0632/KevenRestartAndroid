@@ -43,19 +43,14 @@
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
-
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-
-                <data
-                    android:host="jp.app"
-                    android:pathPrefix="/openwith"
-                    android:scheme="myapp"/>
+                <data android:host="host"
+                      android:scheme="myapp"/>
             </intent-filter>
         </activity>
         <activity android:name=".activity.RecyleViewActivity">
@@ -90,8 +85,11 @@
             android:enabled="true"
             android:process=":remote"/>
 
-        <activity android:name=".activity.BaiduLocation"
-                  android:windowSoftInputMode="adjustPan">
+        <activity
+            android:name=".activity.BaiduLocation"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity android:name=".activity.BaiduMapLine">
         </activity>
     </application>
 

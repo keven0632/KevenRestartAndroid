@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_popupWindow;
     private Context context;
     private Button bt_location;
+    private Button bt_baidu_line;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +70,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         bt_location = (Button) findViewById(R.id.bt_location);
         bt_location.setOnClickListener(this);
+
+        bt_baidu_line = (Button) findViewById(R.id.bt_baidu_line);
+        bt_baidu_line.setOnClickListener(this);
 
         context = this;
 
@@ -148,6 +152,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_location:
                 startActivity(new Intent(this, BaiduLocation.class));
+                break;
+            case R.id.bt_baidu_line:
+                startActivity(new Intent(this, BaiduMapLine.class));
                 break;
             case R.id.bt_camrea:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
