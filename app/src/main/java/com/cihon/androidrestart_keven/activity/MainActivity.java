@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_location;
     private Button bt_baidu_line;
     private Button bt_animation;
+    private Button bt_database;
+    private Button bt_permission;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +79,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         bt_animation = (Button) findViewById(R.id.bt_animation);
         bt_animation.setOnClickListener(this);
+
+        bt_database = (Button) findViewById(R.id.bt_database);
+        bt_database.setOnClickListener(this);
+
+        bt_permission = (Button) findViewById(R.id.bt_permission);
+        bt_permission.setOnClickListener(this);
 
         context = this;
 
@@ -162,6 +170,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_animation:
                 startActivity(new Intent(this, AnimationActivity.class));
+                break;
+            case R.id.bt_database:
+                startActivity(new Intent(this, LitepalDatabaseActivity.class));
+                break;
+            case R.id.bt_permission:
+                startActivity(new Intent(this, LitepalDatabaseActivity.class));
                 break;
             case R.id.bt_camrea:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

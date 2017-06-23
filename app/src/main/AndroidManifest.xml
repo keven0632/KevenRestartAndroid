@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.LOCATION_HARDWARE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
     <!-- 这个权限用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <!-- 这个权限用于访问GPS定位 -->
@@ -98,6 +98,10 @@
         <activity android:name=".activity.AnimationActivity">
         </activity>
         <activity android:name=".activity.AllAnimationActivity">
+        </activity>
+        <activity android:name=".activity.LitepalDatabaseActivity">
+        </activity>
+        <activity android:name=".activity.PermissionActivity">
         </activity>
     </application>
 
