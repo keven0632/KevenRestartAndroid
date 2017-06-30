@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 
+
 android {
 
     compileSdkVersion 25
@@ -9,12 +10,30 @@ android {
         applicationId "com.cihon.androidrestart_keven"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 1
+        versionCode 20170629
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         jackOptions{
             enabled true
         }
+    }
+
+
+
+    //需要配置自己的签名
+    signingConfigs {
+        release {
+            try {
+                keyAlias 'keven'
+                keyPassword '123456'
+                storeFile file('androidRestart.jks')
+                storePassword '123456'
+            }
+            catch (ex) {
+                //throw new Exception("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties")
+            }
+        }
+
     }
 
     buildTypes {
@@ -54,6 +73,8 @@ android {
 }
 //百度地图安全码 35:DD:66:B5:3A:F7:8D:5C:04:A5:6F:42:C8:43:E8:34:D0:02:FA:ED;com.cihon.androidrestart_keven
 
+
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -71,4 +92,9 @@ dependencies {
     compile files('libs/BaiduLBS_Android.jar')
     compile 'org.litepal.android:core:1.5.1'
     compile files('libs/nineoldandroids-2.4.0.jar')
+
+    compile 'com.taobao.android:alisdk-hotfix:2.0.9'
+    compile ('com.taobao.android:alisdk-hotfix:2.0.9') {
+        exclude(module:'utdid4all')
+    }
 }

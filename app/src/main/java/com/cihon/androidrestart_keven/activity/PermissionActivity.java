@@ -25,8 +25,8 @@ public class PermissionActivity extends AppCompatActivity {
 
         mBt_call = (Button) findViewById(R.id.bt_call);
         mBt_call.setOnClickListener(v -> {
-            if (ContextCompat.checkSelfPermission(PermissionActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(PermissionActivity.this, new String[]{Manifest.permission.CALL_PHONE}, 1);
+            if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(PermissionActivity.this, new String[]{Manifest.permission.CALL_PHONE}, 10);
             } else {
                 call();
             }
@@ -46,8 +46,8 @@ public class PermissionActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode) {
-            case 1:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_DENIED) {
+            case 10:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     call();
                 } else {
                     Toast.makeText(PermissionActivity.this, "Äú¾Ü¾øÁËÈ¨ÏŞÊÚÓè", Toast.LENGTH_SHORT).show();
@@ -55,6 +55,7 @@ public class PermissionActivity extends AppCompatActivity {
 
                 break;
             default:
+                break;
         }
     }
 }

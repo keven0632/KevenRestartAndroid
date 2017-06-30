@@ -25,6 +25,11 @@
                 android:layout_height="wrap_content"
                 android:text="fragment"/>
             <Button
+                android:id="@+id/bt_camrea1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拍照"/>
+            <Button
                 android:id="@+id/bt_camrea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,6 +60,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="头部可向上滑动缩小"/>
+            <Button
+                android:id="@+id/bt_srcoll_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="向上滑动导航悬浮"/>
             <Button
                 android:id="@+id/bt_popupWindow"
                 android:layout_width="wrap_content"
@@ -96,6 +106,7 @@
                 android:layout_height="wrap_content"
                 android:text="6.0以上版本运行时权限"
                 android:visibility="visible"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

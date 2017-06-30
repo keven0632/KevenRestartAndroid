@@ -44,10 +44,11 @@ import com.baidu.mapapi.search.poi.PoiSearch;
 import com.baidu.mapapi.utils.route.BaiduMapRoutePlan;
 import com.baidu.mapapi.utils.route.RouteParaOption;
 import com.cihon.androidrestart_keven.R;
+import com.cihon.androidrestart_keven.util.Constant;
 
 import java.util.List;
 
-import static com.cihon.androidrestart_keven.activity.MainActivity.REQUEST_LOCATION;
+import static com.cihon.androidrestart_keven.util.Constant.REQUEST_LOCATION;
 
 public class BaiduLocation extends AppCompatActivity implements BDLocationListener {
 
@@ -89,7 +90,7 @@ public class BaiduLocation extends AppCompatActivity implements BDLocationListen
         mEt_search = (EditText) findViewById(R.id.et_search);
         mBt_search = (Button) findViewById(R.id.bt_search);
         mBt_search.setOnClickListener(v -> {
-            InputMethodManager imm = (InputMethodManager) BaiduLocation.this.getSystemService(Context.INPUT_METHOD_SERVICE);
+            InputMethodManager imm = (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(mEt_search.getWindowToken(), 0);
             String str = mEt_search.getText().toString();
             poiSearch(curr_location, str);
@@ -118,7 +119,7 @@ public class BaiduLocation extends AppCompatActivity implements BDLocationListen
                 baiduMap.clear();
                 if (poiResult == null || poiResult.error == SearchResult.ERRORNO.RESULT_NOT_FOUND) {
 
-                    Toast.makeText(context, "未检索到结果", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "未检索到结果", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (poiResult.error == SearchResult.ERRORNO.NO_ERROR) {
@@ -168,7 +169,7 @@ public class BaiduLocation extends AppCompatActivity implements BDLocationListen
                     .endPoint(marker.getPosition())
                     .cityName(mCity);
             try {
-                BaiduMapRoutePlan.openBaiduMapDrivingRoute(para, context);
+                BaiduMapRoutePlan.openBaiduMapDrivingRoute(para, getApplicationContext());
                 BaiduMapRoutePlan.setSupportWebRoute(true);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -203,7 +204,7 @@ public class BaiduLocation extends AppCompatActivity implements BDLocationListen
      */
     private void addLocalPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            int permissionCheck = ContextCompat.checkSelfPermission(BaiduLocation.this, Manifest.permission.ACCESS_COARSE_LOCATION);
+            int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION);
             if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
 //                if(!ActivityCompat.shouldShowRequestPermissionRationale(ServiceActivity.this,Manifest.permission.ACCESS_COARSE_LOCATION)) {
 //                    Toast.makeText(context,"您已禁止定位权限，请手动????",Toast.LENGTH_SHORT).show();
@@ -219,7 +220,7 @@ public class BaiduLocation extends AppCompatActivity implements BDLocationListen
     }
 
     private void initLocal() {
-        locationClient = new LocationClient(context);
+        locationClient = new LocationClient(getApplicationContext());
         LocationClientOption lOptions = new LocationClientOption();
         lOptions.setCoorType("bd09ll"); //设置坐标??
         lOptions.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);//高精度定位模??
@@ -274,7 +275,7 @@ public class BaiduLocation extends AppCompatActivity implements BDLocationListen
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
         switch (requestCode) {
-            case MainActivity.REQUEST_LOCATION:
+            case Constant.REQUEST_LOCATION:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 //                    Intent intent = new Intent(context, MipcaActivityCapture.class);
 //                    startActivityForResult(intent, 1);

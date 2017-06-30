@@ -12,9 +12,12 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.cihon.androidrestart_keven.R;
 import com.cihon.androidrestart_keven.camera.CameraActivity;
+
+import static com.cihon.androidrestart_keven.util.Constant.REQUEST_CAMERA;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -22,9 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBt_recyleView;
     private Button mBt_fragment;
     private Button bt_camrea;
-    public final static int REQUEST_CAMERA = 1;
-    public final static int REQUEST_STORAGE = 2;
-    public final static int REQUEST_LOCATION = 3;
+
     private Button bt_webview;
     private Button bt_carnum;
     private Button bt_auto;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_animation;
     private Button bt_database;
     private Button bt_permission;
+    private Button bt_srcoll_layout;
+    private Button bt_camrea1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +48,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         mBt_recyleView = (Button) findViewById(R.id.bt_recyleview);
         mBt_recyleView.setOnClickListener(this);
+
         mBt_fragment = (Button) findViewById(R.id.bt_fragment);
         mBt_fragment.setOnClickListener(this);
+
         bt_camrea = (Button) findViewById(R.id.bt_camrea);
         bt_camrea.setOnClickListener(this);
+
+        bt_camrea1 = (Button) findViewById(R.id.bt_camrea1);
+        bt_camrea1.setOnClickListener(this);
 
         bt_webview = (Button) findViewById(R.id.bt_webview);
         bt_webview.setOnClickListener(this);
@@ -83,6 +91,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_database = (Button) findViewById(R.id.bt_database);
         bt_database.setOnClickListener(this);
 
+        bt_srcoll_layout = (Button) findViewById(R.id.bt_srcoll_layout);
+        bt_srcoll_layout.setOnClickListener(this);
+
         bt_permission = (Button) findViewById(R.id.bt_permission);
         bt_permission.setOnClickListener(this);
 
@@ -94,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     /**
-     * è·å–ç›¸åº”æƒé™
+     * »ñÈ¡ÏàÓ¦È¨ÏŞ
      */
     private void getPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -121,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
         switch (requestCode) {
-            case MainActivity.REQUEST_CAMERA:
+            case REQUEST_CAMERA:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 //                    Intent intent = new Intent(context, MipcaActivityCapture.class);
 //                    startActivityForResult(intent, 1);
@@ -136,7 +147,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt_recyleview:
-                startActivity(new Intent(this, RecyleViewActivity.class));
+                Toast.makeText(MainActivity.this,"¶¼ÊÇÈÈ¸üĞÂÈÇµÄ»ö",Toast.LENGTH_SHORT).show();
+//                startActivity(new Intent(this, RecyleViewActivity.class));
                 break;
             case R.id.bt_fragment:
                 startActivity(new Intent(this, FragmentActivity.class));
@@ -146,6 +158,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_srcoll:
                 startActivity(new Intent(this, TabLayoutActivity.class));
+                break;
+            case R.id.bt_srcoll_layout:
+                startActivity(new Intent(this, ScrolllayoutActivity.class));
                 break;
             case R.id.bt_carnum:
                 startActivity(new Intent(this, CarNumActivity.class));
@@ -175,14 +190,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, LitepalDatabaseActivity.class));
                 break;
             case R.id.bt_permission:
-                startActivity(new Intent(this, LitepalDatabaseActivity.class));
+                startActivity(new Intent(this, PermissionActivity.class));
+                break;
+            case R.id.bt_camrea1:
+                startActivity(new Intent(this, TakePhotoActivity.class));
                 break;
             case R.id.bt_camrea:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     int permissionCheck = ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA);
                     if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
 //                if(!ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.CAMERA)) {
-//                    Toast.makeText(context,"æ‹ç…§å’ŒSDå¡æƒé™å·²è¢«ç¦æ­¢ï¼Œè¯·æ‰‹åŠ¨å¼€å¯",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context,"ÅÄÕÕºÍSD¿¨È¨ÏŞÒÑ±»½ûÖ¹£¬ÇëÊÖ¶¯¿ªÆô",Toast.LENGTH_SHORT).show();
 //                    return;
 //                }
                         ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS}, REQUEST_CAMERA);

@@ -30,7 +30,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.cihon.androidrestart_keven.activity.MainActivity.REQUEST_CAMERA;
+import static com.cihon.androidrestart_keven.util.Constant.REQUEST_CAMERA;
+
 
 public class CarNumActivity extends AppCompatActivity implements View.OnClickListener , CameraSurfaceView.TransferPhoto{
     String Province = " ¾©  Õã  ½ò  Íî  »¦  Ãö  Óå  ¸Ó  ¸Û  Â³  °Ä  Ô¥  ¶õ  ÐÂ   Ïæ  Äþ  ÔÁ  ²Ø  ¹ð  ´¨ ¼½  ¹ó ½ú ÔÆ  ÁÉ  ÉÂ ¼ª  ¸Ê ºÚ  Çà   ËÕ   ";

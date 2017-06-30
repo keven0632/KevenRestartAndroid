@@ -31,6 +31,12 @@ public class Base64Util {
     private Base64Util() {
     }
 
+    /**
+     * ½øĞĞbase64±àÂë
+     *
+     * @param data
+     * @return
+     */
     public static String encode(byte[] data) {
         StringBuffer sb = new StringBuffer();
         int len = data.length;
