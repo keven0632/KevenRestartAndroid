@@ -110,7 +110,7 @@ public class TakePhotoActivity extends AppCompatActivity implements View.OnClick
             e.printStackTrace();
         }
         if (Build.VERSION.SDK_INT >= 24) {
-            mImgUri = FileProvider.getUriForFile(TakePhotoActivity.this, "com.cihon.androidrestart_keven.fileprovider", outputImg);
+            mImgUri = FileProvider.getUriForFile(TakePhotoActivity.this, "com.cihon.androidrestart_keven.fil eprovider", outputImg);
         } else {
             mImgUri = Uri.fromFile(outputImg);
         }

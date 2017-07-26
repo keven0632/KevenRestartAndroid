@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cihon.androidrestart_keven.activity.LinearLayoutViewActivity">
+
+    <com.cihon.androidrestart_keven.view.SetItemView
+        android:id="@+id/rl_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:isShowUnderLine="false"
+        app:leftIcon="@drawable/clearcache"
+        app:leftText="@string/fragment_me_tv_clear"
+        app:rightIcon="@drawable/task_arrow"
+        app:textColor="@color/camera_bottom_press_bg"
+        app:textSize="16"/>
+
+
+</LinearLayout>

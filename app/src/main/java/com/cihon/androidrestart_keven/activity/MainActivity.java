@@ -12,11 +12,11 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.cihon.androidrestart_keven.R;
 import com.cihon.androidrestart_keven.camera.CameraActivity;
 
+import static com.cihon.androidrestart_keven.R.id.bt_view_linearlayout;
 import static com.cihon.androidrestart_keven.util.Constant.REQUEST_CAMERA;
 
 
@@ -41,6 +41,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_permission;
     private Button bt_srcoll_layout;
     private Button bt_camrea1;
+    private Button bt_okhttp;
+    private Button bt_alarm;
+    private Button mBt_view;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +101,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_permission = (Button) findViewById(R.id.bt_permission);
         bt_permission.setOnClickListener(this);
 
+        bt_okhttp = (Button) findViewById(R.id.bt_okhttp);
+        bt_okhttp.setOnClickListener(this);
+
+        bt_alarm = (Button) findViewById(R.id.bt_alarm);
+        bt_alarm.setOnClickListener(this);
+
+        mBt_view = (Button) findViewById(R.id.bt_view_linearlayout);
+        mBt_view.setOnClickListener(this);
+
         context = this;
 
 
@@ -147,8 +160,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt_recyleview:
-                Toast.makeText(MainActivity.this,"都是热更新惹的祸",Toast.LENGTH_SHORT).show();
-//                startActivity(new Intent(this, RecyleViewActivity.class));
+//                Toast.makeText(MainActivity.this,"都是热更新惹的祸",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, RecyleViewActivity.class));
                 break;
             case R.id.bt_fragment:
                 startActivity(new Intent(this, FragmentActivity.class));
@@ -192,8 +205,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bt_permission:
                 startActivity(new Intent(this, PermissionActivity.class));
                 break;
+            case R.id.bt_alarm:
+                startActivity(new Intent(this, AlarmActivity.class));
+                break;
             case R.id.bt_camrea1:
                 startActivity(new Intent(this, TakePhotoActivity.class));
+                break;
+            case R.id.bt_okhttp:
+                startActivity(new Intent(this, OkHttpActivity.class));
+                break;
+            case bt_view_linearlayout:
+                startActivity(new Intent(this, LinearLayoutViewActivity.class));
                 break;
             case R.id.bt_camrea:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

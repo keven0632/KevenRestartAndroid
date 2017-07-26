@@ -1,5 +1,6 @@
 package com.cihon.androidrestart_keven.Base;
 
+import com.facebook.stetho.Stetho;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -30,6 +31,9 @@ public class MyApp extends LitePalApplication {
         super.onCreate();
         initApp();
         initHotFix();
+
+        //Facebook推出的Stetho
+        Stetho.initializeWithDefaults(this);
 
         application = this;
 

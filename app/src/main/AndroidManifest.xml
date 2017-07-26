@@ -38,22 +38,24 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.taobao.android.hotfix.IDSECRET"
-            android:value="117826-1" />
+            android:value="117826-1"/>
         <meta-data
             android:name="com.taobao.android.hotfix.APPSECRET"
-            android:value="957fb96d06c9dd12f16e7beed140d266" />
+            android:value="957fb96d06c9dd12f16e7beed140d266"/>
         <meta-data
             android:name="com.taobao.android.hotfix.RSASECRET"
-            android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCVzlpuTWfO5yAZxcDI3PpGxBjjRPorjvuZotCqhsOJTFtXw0jKxynpgjLjwnYb6h8M38LTVeHJ21QkGa8a6caxxJYfCe608zxp+25gIyjrRgbC9xbI3uE6g636GN9mGDL1bWJWoZmMlfydAbIR7/Uh4HHyzzBisEFxtYhj8p+rQyFdT22TM8KPyJE1nnR8998S9C/99lqfxVNjYa5MY5g0C0TmEpfOlfBOj5Caqrgq9TZkxjTzoO2vAMi0j4HZkw7ijdJeh12N9YjyBmLIYBCpH2PXvPLgrn/w31E5xkgp1U2RFn40J2KSw3TtiGhlHLKdS7vKx/LhxurzIK9pcDZJAgMBAAECggEAIzOiPFkkE5JsEKJPcuO6S/a4gm8q+iFXLfr8XZXdTN4MeMsCx+OVDbHyk2KWrmiNc1EBTvfXXr+TPghrBT/52LwBKroCxbKCd8UFYsHgU6jY3eeCCyGUe1OGBkbh9/OnxdQ2T3UZx9dWzO4hEeX5DETZgdz92bLhLf8iVZoluvBnSZIeWeUMe6JqU6L/TTbYe2lJJDoczB3fS1yfhVGVcsGC6qW38+I2Zws+C02Hzm+lJnfDewVPxu02TXIyjq1vqIeHjTtPfugHz7ly51LUuSt+815dA1eTFwz4SUeLe4p6bMKZDl9t0baQkMoDrI/zwfK0VAu/gT0zDPmMrNpeoQKBgQDKL/Tkf5TSFTbQn4QGmAvhiynYI8hZHnrxupocjH6rV4M36UX3HCz1iJfLqxb8Ps0wrrr76cEoR4HpAxL1wEezRm37grvGIXCnTDLNS+Byp//8XPbELtWMuMLf0+63s75wGY7zPJYHWuMSs6xODN+ROcPguK0+S9Us/+pvNz35ewKBgQC9rWWTHe/0lwwAUcrarJDuuzocDKkig+fqFV1l1ONIjOO3rHbw3IftdCdLRuPfoUs0SbXyHDaQq8Sa5RPA4U6Tw6KQbeaCYAaytRlbwdKIqPLaABJgq2NIWo3CSHRo6bBdrdZwwKLXRrK7NH9WNmZZ4G5Z0/+EXIx3sl7q2FAaCwKBgQCy9a+1cJexO8XA8vBRRdN+V0c6YLG88BWyUJCIJHMaBePHYVrkVrQUwEpbo5w8uPm11XL79vNZS7HZJTdq/j54mCZRMG4z+PVVn0R4ImkQE1OpdD+XdjzeycrzgwsQ3q/5WSYGdeH1sKS8sPwaOZrJWG/gQJZXRZfytLI0rpjUcQKBgAkM1/bgC8340wrE3E/4weWSK2ChPgS2lH83y8ALG1kf19GwufAeJaIv05wk4sSN1p/FEJhfvj7C41ucqIegeHZWdFA93izEVi16tJ4LLnd00DmUnUvdgZw3LeJiQKOs2sxtefjhSCPLbMW/6H99kv6g1cMVeXCgVdd0PFEqRxAnAoGBAKFAkEbC+URhe/wXyhjXsbIZvPrdLKI7ESceJ9xPWhmfCyKqmLV/b3OUPe/UdvLs+Rkk/Utw1vQ4/Kpw02XajhejPO693or8RNi04TjZ/5ikggsQhsgdG41AXHmauvQvDkFDBd5x9VnC4fxP+PZZMIqKUnpH/fLTdOJgPWmrs7AT" />
+            android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCVzlpuTWfO5yAZxcDI3PpGxBjjRPorjvuZotCqhsOJTFtXw0jKxynpgjLjwnYb6h8M38LTVeHJ21QkGa8a6caxxJYfCe608zxp+25gIyjrRgbC9xbI3uE6g636GN9mGDL1bWJWoZmMlfydAbIR7/Uh4HHyzzBisEFxtYhj8p+rQyFdT22TM8KPyJE1nnR8998S9C/99lqfxVNjYa5MY5g0C0TmEpfOlfBOj5Caqrgq9TZkxjTzoO2vAMi0j4HZkw7ijdJeh12N9YjyBmLIYBCpH2PXvPLgrn/w31E5xkgp1U2RFn40J2KSw3TtiGhlHLKdS7vKx/LhxurzIK9pcDZJAgMBAAECggEAIzOiPFkkE5JsEKJPcuO6S/a4gm8q+iFXLfr8XZXdTN4MeMsCx+OVDbHyk2KWrmiNc1EBTvfXXr+TPghrBT/52LwBKroCxbKCd8UFYsHgU6jY3eeCCyGUe1OGBkbh9/OnxdQ2T3UZx9dWzO4hEeX5DETZgdz92bLhLf8iVZoluvBnSZIeWeUMe6JqU6L/TTbYe2lJJDoczB3fS1yfhVGVcsGC6qW38+I2Zws+C02Hzm+lJnfDewVPxu02TXIyjq1vqIeHjTtPfugHz7ly51LUuSt+815dA1eTFwz4SUeLe4p6bMKZDl9t0baQkMoDrI/zwfK0VAu/gT0zDPmMrNpeoQKBgQDKL/Tkf5TSFTbQn4QGmAvhiynYI8hZHnrxupocjH6rV4M36UX3HCz1iJfLqxb8Ps0wrrr76cEoR4HpAxL1wEezRm37grvGIXCnTDLNS+Byp//8XPbELtWMuMLf0+63s75wGY7zPJYHWuMSs6xODN+ROcPguK0+S9Us/+pvNz35ewKBgQC9rWWTHe/0lwwAUcrarJDuuzocDKkig+fqFV1l1ONIjOO3rHbw3IftdCdLRuPfoUs0SbXyHDaQq8Sa5RPA4U6Tw6KQbeaCYAaytRlbwdKIqPLaABJgq2NIWo3CSHRo6bBdrdZwwKLXRrK7NH9WNmZZ4G5Z0/+EXIx3sl7q2FAaCwKBgQCy9a+1cJexO8XA8vBRRdN+V0c6YLG88BWyUJCIJHMaBePHYVrkVrQUwEpbo5w8uPm11XL79vNZS7HZJTdq/j54mCZRMG4z+PVVn0R4ImkQE1OpdD+XdjzeycrzgwsQ3q/5WSYGdeH1sKS8sPwaOZrJWG/gQJZXRZfytLI0rpjUcQKBgAkM1/bgC8340wrE3E/4weWSK2ChPgS2lH83y8ALG1kf19GwufAeJaIv05wk4sSN1p/FEJhfvj7C41ucqIegeHZWdFA93izEVi16tJ4LLnd00DmUnUvdgZw3LeJiQKOs2sxtefjhSCPLbMW/6H99kv6g1cMVeXCgVdd0PFEqRxAnAoGBAKFAkEbC+URhe/wXyhjXsbIZvPrdLKI7ESceJ9xPWhmfCyKqmLV/b3OUPe/UdvLs+Rkk/Utw1vQ4/Kpw02XajhejPO693or8RNi04TjZ/5ikggsQhsgdG41AXHmauvQvDkFDBd5x9VnC4fxP+PZZMIqKUnpH/fLTdOJgPWmrs7AT"/>
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.cihon.androidrestart_keven.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
-                android:resource="@xml/file_paths"
-                android:name="android.support.FILE_PROVIDER_PATHS"/>
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
         </provider>
+
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="TFPlcchACzZ2zfslEkb5S8UWldbmtc1H"/>
@@ -130,6 +132,26 @@
         <activity android:name=".notification.NotificationActivity">
         </activity>
         <activity android:name=".activity.TakePhotoActivity">
+        </activity>
+        <activity android:name=".activity.OkHttpActivity">
+        </activity>
+
+        <service
+            android:name=".myservice.MyService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <activity android:name=".activity.AlarmActivity">
+        </activity>
+
+        <service
+            android:name=".service.LongRunningService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <activity android:name=".activity.LinearLayoutViewActivity">
         </activity>
     </application>
 

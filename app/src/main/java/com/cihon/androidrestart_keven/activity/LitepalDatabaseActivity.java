@@ -36,6 +36,7 @@ public class LitepalDatabaseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Connector.getDatabase();
                 Log.e("tag", "现在在创建数据库");
+                Log.e("","");
             }
         });
 /**
