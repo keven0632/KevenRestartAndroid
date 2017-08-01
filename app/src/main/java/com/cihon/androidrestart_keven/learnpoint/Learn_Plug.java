@@ -22,3 +22,11 @@ public class Learn_Plug {
      配合ButterKnife实现注解，从此不用写findViewById，想着就爽啊。在Activity，	Fragment，Adapter中选中布局xml的资源id自动生成butterknife注解。
      */
 }
+/**
+ * 必须了解的RecyclerView的五大开源项目-解决上拉加载、下拉刷新和添加Header、Footer等问题
+ * 1.SwipeToLoadLayout-推荐使用
+ * 2.UltimateRecyclerView-大名鼎鼎
+ * 3.IRecyclerView-效果最炫
+ * 4.PullLoadMoreRecyclerView-属性最全
+ * 5.HeaderAndFooterRecyclerView-封装完善
+ */

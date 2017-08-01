@@ -37,14 +37,11 @@ public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
 
 @Override
 public void onBindViewHolder(MyViewHolder holder,final int position){
-        holder.choice_text.setOnClickListener(new View.OnClickListener(){
-@Override
-public void onClick(View v){
-        if(myItemClickListener!=null){
-        myItemClickListener.onItemClick(v,position);
-        }
-        }
-        });
+        holder.choice_text.setOnClickListener(v -> {
+                if(myItemClickListener!=null){
+                myItemClickListener.onItemClick(v,position);
+                }
+                });
         }
 
 @Override

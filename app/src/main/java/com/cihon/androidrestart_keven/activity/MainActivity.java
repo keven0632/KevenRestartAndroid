@@ -16,7 +16,6 @@ import android.widget.Button;
 import com.cihon.androidrestart_keven.R;
 import com.cihon.androidrestart_keven.camera.CameraActivity;
 
-import static com.cihon.androidrestart_keven.R.id.bt_view_linearlayout;
 import static com.cihon.androidrestart_keven.util.Constant.REQUEST_CAMERA;
 
 
@@ -44,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt_okhttp;
     private Button bt_alarm;
     private Button mBt_view;
+    private Button bt_view_password;
+    private Button bt_carview;
 
 
     @Override
@@ -109,6 +110,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mBt_view = (Button) findViewById(R.id.bt_view_linearlayout);
         mBt_view.setOnClickListener(this);
+
+        bt_view_password = (Button) findViewById(R.id.bt_view_password);
+        bt_view_password.setOnClickListener(this);
+
+        bt_carview = (Button) findViewById(R.id.bt_carview);
+        bt_carview.setOnClickListener(this);
 
         context = this;
 
@@ -214,8 +221,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bt_okhttp:
                 startActivity(new Intent(this, OkHttpActivity.class));
                 break;
-            case bt_view_linearlayout:
+            case R.id.bt_view_linearlayout:
                 startActivity(new Intent(this, LinearLayoutViewActivity.class));
+                break;
+            case R.id.bt_view_password:
+                startActivity(new Intent(this, EditTextActivity.class));
+                break;
+            case R.id.bt_carview:
+                startActivity(new Intent(this, CardViewActivity.class));
                 break;
             case R.id.bt_camrea:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

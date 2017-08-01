@@ -1,10 +1,11 @@
 package com.cihon.androidrestart_keven.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.view.View;
 
 import com.cihon.androidrestart_keven.R;
 import com.cihon.androidrestart_keven.adapter.FruitAdapter;
@@ -30,6 +31,24 @@ public class RecyleViewActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(layoutManager);
         FruitAdapter adapter = new FruitAdapter(mFruitList);
         mRecyclerView.setAdapter(adapter);
+        /**
+         * 在activity中实现接口，进行相应的点击事件处理
+         */
+        adapter.setOnItemClickListener(new FruitAdapter.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(View view, int position) {
+
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+
+            }
+        });
+
+        //设置分割线
+//        mRecyclerView.addItemDecoration(new DividerItemDecoration(RecyleViewActivity.this, DividerItemDecoration.HORIZONTAL_LIST));
     }
 
     public String getRandomLengthName(String name) {
