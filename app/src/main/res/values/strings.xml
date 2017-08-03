@@ -90,4 +90,10 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="fragment_me_tv_clear">清理缓存</string>
+    <string name="scale_up_show_behavior">
+        com.cihon.androidrestart_keven.behavior.ScaleUpShowBehavior
+    </string>
+    <string name="scale_down_show_behavior">
+        com.cihon.androidrestart_keven.behavior.ScaleDownShowBehavior
+    </string>
 </resources>

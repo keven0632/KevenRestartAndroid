@@ -2,10 +2,12 @@ package com.cihon.androidrestart_keven.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
+import android.widget.Button;
 
 import com.cihon.androidrestart_keven.R;
 import com.cihon.androidrestart_keven.adapter.FruitAdapter;
@@ -31,6 +33,13 @@ public class RecyleViewActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(layoutManager);
         FruitAdapter adapter = new FruitAdapter(mFruitList);
         mRecyclerView.setAdapter(adapter);
+
+        Button bt_day = (Button) findViewById(R.id.bt_day);
+        Button bt_night = (Button) findViewById(R.id.bt_night);
+        bt_day.setOnClickListener(v -> getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO));
+        bt_night.setOnClickListener(v -> getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES));
+
+
         /**
          * 在activity中实现接口，进行相应的点击事件处理
          */

@@ -48,12 +48,7 @@ public class TabLayoutActivity extends AppCompatActivity {
 
     private void initToolBar() {
         mToolbar.setNavigationIcon(R.mipmap.ic_return);
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+        mToolbar.setNavigationOnClickListener(v -> onBackPressed());
     }
 
     private void initData() {

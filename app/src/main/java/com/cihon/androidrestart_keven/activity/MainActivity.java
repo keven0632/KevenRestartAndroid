@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBt_view;
     private Button bt_view_password;
     private Button bt_carview;
+    private Button bt_behavior;
 
 
     @Override
@@ -116,6 +117,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         bt_carview = (Button) findViewById(R.id.bt_carview);
         bt_carview.setOnClickListener(this);
+
+        bt_behavior = (Button) findViewById(R.id.bt_behavior);
+        bt_behavior.setOnClickListener(this);
 
         context = this;
 
@@ -229,6 +233,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_carview:
                 startActivity(new Intent(this, CardViewActivity.class));
+                break;
+            case R.id.bt_behavior:
+                startActivity(new Intent(this, BehaviorActivity.class));
                 break;
             case R.id.bt_camrea:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

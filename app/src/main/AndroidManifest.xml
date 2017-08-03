@@ -62,6 +62,7 @@
 
         <activity
             android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -162,6 +163,16 @@
         <activity android:name=".activity.Testactivity">
         </activity>
         <activity android:name=".activity.CardViewActivity">
+        </activity>
+        <activity android:name=".activity.BehaviorActivity">
+        </activity>
+        <activity android:name=".activity.BottomSheetBehaviorActivity">
+        </activity>
+        <activity android:name=".activity.BackTopActivity">
+        </activity>
+        <activity android:name=".activity.ZhihuActivity">
+        </activity>
+        <activity android:name=".activity.SwipeDismissBehaviorActivity">
         </activity>
     </application>
 
