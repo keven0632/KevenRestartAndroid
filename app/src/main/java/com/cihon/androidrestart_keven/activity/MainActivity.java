@@ -76,8 +76,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_srcoll = (Button) findViewById(R.id.bt_srcoll);
         bt_srcoll.setOnClickListener(this);
 
-        bt_srcoll_title = (Button) findViewById(R.id.bt_srcoll_title);
-        bt_srcoll_title.setOnClickListener(this);
+//        bt_srcoll_title = (Button) findViewById(R.id.bt_srcoll_title);
+//        bt_srcoll_title.setOnClickListener(this);
 
         bt_download = (Button) findViewById(R.id.bt_download);
         bt_download.setOnClickListener(this);
@@ -97,8 +97,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_database = (Button) findViewById(R.id.bt_database);
         bt_database.setOnClickListener(this);
 
-        bt_srcoll_layout = (Button) findViewById(R.id.bt_srcoll_layout);
-        bt_srcoll_layout.setOnClickListener(this);
+//        bt_srcoll_layout = (Button) findViewById(R.id.bt_srcoll_layout);
+//        bt_srcoll_layout.setOnClickListener(this);
 
         bt_permission = (Button) findViewById(R.id.bt_permission);
         bt_permission.setOnClickListener(this);
@@ -183,17 +183,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bt_srcoll:
                 startActivity(new Intent(this, TabLayoutActivity.class));
                 break;
-            case R.id.bt_srcoll_layout:
-                startActivity(new Intent(this, ScrolllayoutActivity.class));
-                break;
             case R.id.bt_carnum:
                 startActivity(new Intent(this, CarNumActivity.class));
                 break;
             case R.id.bt_auto:
                 startActivity(new Intent(this, AutoImgActivity.class));
-                break;
-            case R.id.bt_srcoll_title:
-                startActivity(new Intent(this, ScrollingActivity.class));
                 break;
             case R.id.bt_download:
                 startActivity(new Intent(this, DownLoadActivity.class));
@@ -220,13 +214,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, AlarmActivity.class));
                 break;
             case R.id.bt_camrea1:
-                startActivity(new Intent(this, TakePhotoActivity.class));
+                startActivity(new Intent(this, TakePictureActivity.class));
                 break;
             case R.id.bt_okhttp:
                 startActivity(new Intent(this, OkHttpActivity.class));
                 break;
             case R.id.bt_view_linearlayout:
-                startActivity(new Intent(this, LinearLayoutViewActivity.class));
+                startActivity(new Intent(this, SelfViewActivity.class));
                 break;
             case R.id.bt_view_password:
                 startActivity(new Intent(this, EditTextActivity.class));

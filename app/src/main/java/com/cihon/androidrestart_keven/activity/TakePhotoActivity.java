@@ -99,7 +99,7 @@ public class TakePhotoActivity extends AppCompatActivity implements View.OnClick
      * 调用相机进行拍照
      */
     private void takePhoto() {
-    //创建File对象，用于存储拍照后的照片
+        //创建File对象，用于存储拍照后的照片
         File outputImg = new File(getExternalCacheDir(), "output_img.jpg");
         try {
             if (outputImg.exists()) {
@@ -110,7 +110,7 @@ public class TakePhotoActivity extends AppCompatActivity implements View.OnClick
             e.printStackTrace();
         }
         if (Build.VERSION.SDK_INT >= 24) {
-            mImgUri = FileProvider.getUriForFile(TakePhotoActivity.this, "com.cihon.androidrestart_keven.fil eprovider", outputImg);
+            mImgUri = FileProvider.getUriForFile(TakePhotoActivity.this, "com.cihon.androidrestart_keven.fileprovider", outputImg);
         } else {
             mImgUri = Uri.fromFile(outputImg);
         }

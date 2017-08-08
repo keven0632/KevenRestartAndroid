@@ -45,6 +45,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="滑动删除Behavior"/>
+        <Button
+            android:id="@+id/btn_follow_move"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="跟随移动Behavior"/>
+        <Button
+            android:id="@+id/bt_srcoll_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="头部可向上滑动缩小"/>
+        <Button
+            android:id="@+id/bt_srcoll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="向上滑动导航悬浮"/>
 
     </LinearLayout>
 

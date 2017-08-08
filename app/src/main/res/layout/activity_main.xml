@@ -16,129 +16,123 @@
             android:orientation="vertical">
             <Button
                 android:id="@+id/bt_recyleview"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="recyleview的使用"/>
             <Button
                 android:id="@+id/bt_fragment"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="fragment"/>
             <Button
                 android:id="@+id/bt_camrea1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="visible"
                 android:text="拍照"/>
             <Button
+                android:visibility="gone"
                 android:id="@+id/bt_camrea"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="行驶证拍照"/>
             <Button
+                android:visibility="gone"
                 android:id="@+id/bt_webview"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="h5调用拍照,结束后传值给h5"/>
             <Button
                 android:id="@+id/bt_carnum"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="生成车牌号"
                 android:visibility="gone"/>
             <Button
                 android:id="@+id/bt_auto"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="自动轮播图"/>
             <Button
                 android:id="@+id/bt_srcoll"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="横向滚动Tab栏"/>
-            <Button
-                android:id="@+id/bt_srcoll_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="头部可向上滑动缩小"/>
-            <Button
-                android:id="@+id/bt_srcoll_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="向上滑动导航悬浮"/>
+
             <Button
                 android:id="@+id/bt_popupWindow"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="通用popupWindow使用"/>
             <Button
                 android:id="@+id/bt_download"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="下载文件安装"
                 android:visibility="gone"/>
             <Button
                 android:id="@+id/bt_location"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="百度地图定位"
                 android:visibility="visible"/>
             <Button
                 android:id="@+id/bt_baidu_line"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="百度地图路线"
                 android:visibility="visible"/>
             <Button
                 android:id="@+id/bt_animation"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="动画进度条"
                 android:visibility="visible"/>
             <Button
                 android:id="@+id/bt_database"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="通过litepal操作数据库"
                 android:visibility="visible"/>
             <Button
                 android:id="@+id/bt_permission"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="6.0以上版本运行时权限"
                 android:visibility="visible"/>
             <Button
                 android:id="@+id/bt_okhttp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="OkHttp的使用"
                 android:visibility="visible"/>
             <Button
                 android:id="@+id/bt_alarm"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Alarm机制"
                 android:visibility="visible"/>
             <Button
                 android:id="@+id/bt_view_linearlayout"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="自定义条目"
                 android:visibility="visible"/>
             <Button
                 android:id="@+id/bt_view_password"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="自定义密码输入框"
-                android:visibility="visible"/>
+                android:visibility="gone"/>
             <Button
                 android:id="@+id/bt_carview"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CardView的使用"
                 android:visibility="visible"/>
             <Button
                 android:id="@+id/bt_behavior"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="behavior的使用"
                 android:visibility="visible"/>

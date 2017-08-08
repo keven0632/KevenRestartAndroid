@@ -21,6 +21,9 @@ public class BehaviorActivity extends AppCompatActivity implements View.OnClickL
         findViewById(R.id.btn_zhihu).setOnClickListener(this);
         findViewById(R.id.btn_bottom_sheet).setOnClickListener(this);
         findViewById(R.id.btn_swipe_dismiss).setOnClickListener(this);
+        findViewById(R.id.btn_follow_move).setOnClickListener(this);
+        findViewById(R.id.bt_srcoll_layout).setOnClickListener(this);
+        findViewById(R.id.bt_srcoll_title).setOnClickListener(this);
     }
 
     @Override
@@ -33,6 +36,12 @@ public class BehaviorActivity extends AppCompatActivity implements View.OnClickL
             startActivity(new Intent(this, BottomSheetBehaviorActivity.class));
         } else if (v.getId() == R.id.btn_swipe_dismiss) {// »¬¶¯É¾³ý¡£
             startActivity(new Intent(this, SwipeDismissBehaviorActivity.class));
+        }else if(v.getId()==R.id.btn_follow_move){//¸úËæÒÆ¶¯
+            startActivity(new Intent(this, FollowMoveActivity.class));
+        }else if(v.getId()==R.id.bt_srcoll_layout){
+            startActivity(new Intent(this, ScrolllayoutActivity.class));
+        }else if(v.getId()==R.id.bt_srcoll_title){
+            startActivity(new Intent(this, ScrollingActivity.class));
         }
     }
 }

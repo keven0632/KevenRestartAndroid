@@ -12,6 +12,7 @@ import android.widget.Button;
 import com.cihon.androidrestart_keven.R;
 import com.cihon.androidrestart_keven.adapter.FruitAdapter;
 import com.cihon.androidrestart_keven.bean.Fruit;
+import com.githang.statusbar.StatusBarCompat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +27,8 @@ public class RecyleViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recyle_view);
+        StatusBarCompat.setStatusBarColor(RecyleViewActivity.this, getResources().getColor(R.color.color_tel), true);
+
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         initFruits();//初始化水果数据
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
@@ -38,7 +41,8 @@ public class RecyleViewActivity extends AppCompatActivity {
         Button bt_night = (Button) findViewById(R.id.bt_night);
         bt_day.setOnClickListener(v -> getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO));
         bt_night.setOnClickListener(v -> getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES));
-
+        findViewById(R.id.bt_red).setOnClickListener(v -> StatusBarCompat.setStatusBarColor(RecyleViewActivity.this, getResources().getColor(R.color.text_red_two), true));
+        findViewById(R.id.bt_blue).setOnClickListener(v -> StatusBarCompat.setStatusBarColor(RecyleViewActivity.this, getResources().getColor(R.color.color_tel), true));
 
         /**
          * 在activity中实现接口，进行相应的点击事件处理
